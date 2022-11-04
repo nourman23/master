@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
 Route::get('/signup', function () {
@@ -28,7 +28,14 @@ Route::get('/login', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 });
+Route::get('/services', function () {
+    return view('pages.services');
+});
 
 Route::get('/profile', function () {
     return view('pages.profile');
+});
+
+Route::get('/about', function () {
+    return view('pages.about');
 });
