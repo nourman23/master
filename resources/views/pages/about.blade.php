@@ -46,7 +46,7 @@
         </div>
         <div class="four col-md-3">
             <div class="counter-box">
-                <i class="fa  fa-shopping-cart"></i>
+                <i class="fa fa-shopping-cart"></i>
                 <span class="counter">289</span>
                 <p>Available Products</p>
             </div>

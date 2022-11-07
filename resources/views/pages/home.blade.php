@@ -8,7 +8,9 @@
   ">
 
 <div style="width:100%; height:100%;position: absolute;top:0; bottom:0; background-color:rgba(0, 0, 0, 0.482)">
-    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center " >
+
+      <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center " >
+        <div style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
     <ul class="nav nav-tabs bg-light" id="myTab" role="tablist"
     style="
     width:500px;
@@ -33,23 +35,22 @@
         </li>
 
       </ul>
-      <div class="tab-content bg-light p-5 " id="myTabContent"
+      <div class="tab-content p-5 " id="myTabContent"
       style="
       width:500px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      background-color:white;
     ">
-
     {{-- here where if choose driver or want to request a move request --}}
-        <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane fade show active text-dark" id="home" role="tabpanel" aria-labelledby="home-tab">
            <p>Become a driver and get paid ! </p>
         <a href="/driver_signup" class="btn bg-color " >
             <div class="d-flex "><i class="material-icons px-2">people</i> Join Us</div></a>
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="tab-pane fade text-dark" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <p>Request an drive for your things !</p>
             <a href="/move_order_request" class="btn bg-color">
                 <div class="d-flex "><i class="fa-solid fa-people-carry-box px-2" style="font-size: 20px"></i>Request move order</div></a>
-        </div>
+        </div></div>
 
       </div>
     </div>

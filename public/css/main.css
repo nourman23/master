@@ -177,7 +177,7 @@
 .counter-box i {
     font-size: 60px;
     margin: 0 0 15px;
-    color: #d2d2d2;
+    color: var(--color-primary);
 }
 
 .counter {
@@ -225,7 +225,7 @@ section {
 
 .section-header {
     text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 
 .section-header h2 {
@@ -313,6 +313,7 @@ section {
 
 .testimonials .testimonial-item .stars {
     margin: 10px 0;
+    color: #545454;
 }
 
 .testimonials .testimonial-item .stars .checked {
@@ -670,4 +671,11 @@ section {
 
 footer {
     background: var(--color-secondary);
+    background-color: #3b3b3b;
+}
+.nav-link {
+    font-size: 17px;
+}
+.active {
+    color: var(--color-primary) !important;
 }

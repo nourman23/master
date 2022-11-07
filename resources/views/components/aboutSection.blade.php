@@ -15,22 +15,22 @@
             Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores. Corrupti totam ut eius incidunt reiciendis veritatis asperiores placeat.
           </p>
           <ul>
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bi bi-diagram-3"></i>
+            <li data-aos="fade-up" data-aos-delay="100" class="d-flex align-items-center">
+                <i class="fa fa-duotone fa-box"></i>
               <div>
                 <h5>Ullamco laboris nisi ut aliquip consequat</h5>
                 <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
               </div>
             </li>
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-fullscreen-exit"></i>
+            <li data-aos="fade-up" data-aos-delay="200" class="d-flex align-items-center">
+                <i class="fa fa-light fa-truck-ramp-box"></i>
               <div>
                 <h5>Magnam soluta odio exercitationem reprehenderi</h5>
                 <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
               </div>
             </li>
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-broadcast"></i>
+            <li data-aos="fade-up" data-aos-delay="300" class="d-flex align-items-center">
+             <i class="fa fa-light fa-house-user"></i>
               <div>
                 <h5>Voluptatem et qui exercitationem</h5>
                 <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>

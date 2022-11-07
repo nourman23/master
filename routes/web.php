@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/signup', function () {
-    return view('pages.signup');
+    return view('pages.user-signup');
 });
 
 Route::get('/login', function () {
@@ -38,4 +38,7 @@ Route::get('/profile', function () {
 
 Route::get('/about', function () {
     return view('pages.about');
+});
+Route::get('/driver_signup', function () {
+    return view('pages.driver_signup');
 });

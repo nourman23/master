@@ -22,7 +22,7 @@
                       <span class="fa fa-star checked"></span>
                       <span class="fa fa-star checked"></span>
                     </div>
-                  <p>
+                  <p class="text-dark">
                       <i class="fa fa-quote-left quote-icon"></i>
                       Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                       <i class="fa fa-quote-right quote-icon"></i>
@@ -45,7 +45,7 @@
                       <span class="fa fa-star"></span>
                       <span class="fa fa-star"></span>
                     </div>
-                  <p>
+                  <p class="text-dark">
                       <i class="fa fa-quote-left quote-icon"></i>
                       Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                       <i class="fa fa-quote-right quote-icon"></i>
@@ -68,7 +68,7 @@
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star"></span>
                   </div>
-                  <p>
+                  <p class="text-dark">
                     <i class="fa fa-quote-left quote-icon"></i>
                     Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                     <i class="fa fa-quote-right quote-icon"></i>

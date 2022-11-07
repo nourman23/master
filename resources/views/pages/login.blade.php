@@ -1,11 +1,9 @@
 @extends('layouts.head')
 
 @section('content')
-<section class="vh-90"
-style="
-">
-    <div class="container h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
+<section >
+    <div class="container ">
+      <div class="row d-flex justify-content-center align-items-center">
         <div class="col col-xl-10">
           <div class="card" style="border-radius: 1rem;
 box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -29,17 +27,17 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8p
                     <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">login into your account</h5>
 
                     <div class="form-outline mb-4">
-                      <input type="email" id="form2Example17" class="form-control form-control-lg" placeholder="Email address" />
+                      <input type="email" name="email" id="form2Example17" class="form-control form-control-lg" placeholder="Email address" />
                       {{-- <label class="form-label" for="form2Example17">Email address</label> --}}
                     </div>
 
                     <div class="form-outline mb-4">
-                      <input type="password" id="form2Example27" class="form-control form-control-lg" placeholder="Password" />
+                      <input type="password" name="password" id="form2Example27" class="form-control form-control-lg" placeholder="Password" />
                       {{-- <label class="form-label" for="form2Example27">Password</label> --}}
                     </div>
 
                     <div class="pt-1 mb-4">
-                      <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                      <button class="btn bg-color btn-lg btn-block" type="button">Login</button>
                     </div>
 
                     {{-- <a class="small text-muted" href="#!">Forgot password?</a> --}}
