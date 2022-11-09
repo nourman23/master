@@ -1,78 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.head')
+@section('Jumbotron')
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+@endsection
+{{-- <div class="w-100 text-light p-4 d-flex align-items-center justify-content-center" style="margin-top: 80px; background-color:#3b3b3b; ">
+    <img src="{{ asset('images/hello.png ')}}" style="width:50px"alt="">
+    <p class="mx-4">Hello Nourman</p>
+</div> --}}
 
-  <title>@yield('title' , "companyName")</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Jumbotron -->
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link href="{{ asset('css/main.css ')}}" rel="stylesheet">
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class=" text-center bg-light position-relative shadow" style="margin-top: 58px;height:450px;
+    background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cardboard-boxes-and-cleaning-things-for-moving-into-a-new-home-1573953252.jpg?crop=1.00xw:0.758xh;0,0.173xh&resize=1200:*')
+    ">
+<div style="width:100%; height:100%;position: absolute;top:0; bottom:0; background-color:rgba(0, 0, 0, 0.482)">
+    <div class="w-100 h-100 d-flex  justify-content-center align-items-center" >
 
-</head>
-<body>
-
-
-
-<div style="display: grid;
-place-items: center;">
-
-<div class="container d-flex justify-content-center m-5" >
-    <div class="card p-3 py-4"style="width: 900px;border:none">
-        <div class="text-center">
-		<img src="https://i.imgur.com/stD0Q19.jpg" width="100" class="rounded-circle">
-            <h3 class="mt-2">Maria Smantha</h3>
-            <div class="d-flex  justify-content-between">
-			<div class="mt-1 clearfix w-75 d-flex justify-content-end"><p class="w-75 text-center"> Driver</p></div>
-			 <a class="profile_button btn btn-success ">Edit profile</a>
-            </div>
-             <span></span>
-
-			<div class="row mt-3 mb-3">
-
-			  <div class="col-md-4">
-				<h5>Trips</h5>
-				<span class="num">10</span>
-			  </div>
-			  <div class="col-md-4">
-			  <h5>Rating</h5>
-				<span class="num">10</span>
-			  </div>
-			  <div class="col-md-4">
-			  <h5>Years</h5>
-				<span class="num">10</span>
-			  </div>
-
-			</div>
-
-			<hr class="line">
-
-
-			 <div class="profile mt-5">
-
-
-		</div>
-
-        </div>
+        <img src="{{ asset('images/hello.png ')}}" style="width:50px"alt="">
+        <p class="mx-4 text-light">Hello Nourman</p>
     </div>
-</div></div>
+      </div>
+    </div>
 
-<script src="{{ asset('js/main.js ')}}"></script>
+    <!-- Jumbotron -->
+@section("content")
+{{-- profile page --}}
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src="https://kit.fontawesome.com/2856e6e01e.js" crossorigin="anonymous"></script>
-</body>
-</html>
+<div>
+
+
+          <div class="row d-flex justify-content-center w-75 " style="margin: -70px auto">
+            <div class="col col-md-9 col-lg-7 col-xl-9 ">
+              <div class="card " style="border-radius: 15px;">
+                <div class="card-body p-4">
+                  <div class="d-flex text-black">
+                    <div class="flex-shrink-0">
+                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                        alt="Generic placeholder image" class="img-fluid"
+                        style="width: 180px; border-radius: 10px;">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <div class="d-flex justify-content-between mb-3">
+                      <h5 >Danny McLoan</h5>
+                      <div>
+                        <button type="button" class="btn bg-color flex-grow-1">Edit profile</button>
+                      </div></div>
+                      <div class="d-flex justify-content-around rounded-3 p-2 mb-2"
+                        style="background-color: #efefef;">
+                        <div>
+                          <p class="small text-muted mb-1">Articles</p>
+                          <p class="mb-0">41</p>
+                        </div>
+                        <div class="px-3">
+                          <p class="small text-muted mb-1">Followers</p>
+                          <p class="mb-0">976</p>
+                        </div>
+                        <div>
+                          <p class="small text-muted mb-1">Rating</p>
+                          <p class="mb-0">8.5</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="mask d-flex align-items-center h-100 m-5">
+            <div class="container shadow p-5">
+                <div class="section-header"><h2>Your order history</h2></div>
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <div class="table-responsive bg-white">
+                    <table class="table mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">EMPLOYEES</th>
+                          <th scope="col">DATE</th>
+                          <th scope="col">LOCATION</th>
+                          <th scope="col">DESTINATION</th>
+                          <th scope="col">STATUS</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" style="color: #666666;">Tiger Nixon</th>
+                          <td>System Architect</td>
+                          <td>tnixon12@example.com</td>
+                          <td>61</td>
+                          <td>Edinburgh</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">Sonya Frost</th>
+                          <td>Software Engineer</td>
+                          <td>sfrost34@example.com</td>
+                          <td>23</td>
+                          <td>Edinburgh</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">Jena Gaines</th>
+                          <td>Office Manager</td>
+                          <td>jgaines75@example.com</td>
+                          <td>30</td>
+                          <td>London</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">Quinn Flynn</th>
+                          <td>Support Lead</td>
+                          <td>qflyn09@example.com</td>
+                          <td>22</td>
+                          <td>Edinburgh</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">Charde Marshall</th>
+                          <td>Regional Director</td>
+                          <td>cmarshall28@example.com</td>
+                          <td>36</td>
+                          <td>San Francisco</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">Haley Kennedy</th>
+                          <td>Senior Marketing Designer</td>
+                          <td>hkennedy63@example.com</td>
+                          <td>43</td>
+                          <td>London</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" style="color: #666666;">Tatyana Fitzpatrick</th>
+                          <td>Regional Director</td>
+                          <td>tfitzpatrick00@example.com</td>
+                          <td>19</td>
+                          <td>Warsaw</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+
+
+@endsection

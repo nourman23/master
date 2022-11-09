@@ -22,6 +22,9 @@
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+body {
+    min-height: 100vh;
+}
 .bg-color {
     background-color: var(--color-primary);
     color: white;
@@ -670,6 +673,7 @@ section {
 --------------------------------------------------------------*/
 
 footer {
+    width: 100%;
     background: var(--color-secondary);
     background-color: #3b3b3b;
 }
