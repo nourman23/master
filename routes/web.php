@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Ramsey\Uuid\Math\RoundingMode;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,4 +42,7 @@ Route::get('/about', function () {
 });
 Route::get('/driver_signup', function () {
     return view('pages.driver_signup');
+});
+Route::get('/move_order_request', function () {
+    return view('pages.move_order_request');
 });

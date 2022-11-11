@@ -28,6 +28,17 @@
       {{-- <input type="email" id="form2Example17"  placeholder="Email address" /> --}}
     </div>
 
+        <div class="form-outline mb-4">
+            <label class="radio inline">
+                <input type="radio" name="gender" value="male" checked>
+                <span> Male </span>
+            </label>
+            <label class="radio inline">
+                <input type="radio" name="gender" value="female">
+                <span>Female </span>
+            </label>
+
+    </div>
     <div class="form-outline mb-4">
       <input type="password" name="password" id="form2Example27" class="form-control form-control-lg" placeholder="Password" />
     </div>

@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
+<body id="body">
 
 
     @include('layouts.header')
@@ -39,4 +39,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="https://kit.fontawesome.com/2856e6e01e.js" crossorigin="anonymous"></script>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+{{-- <script src="app.js"></script> --}}
 </html>

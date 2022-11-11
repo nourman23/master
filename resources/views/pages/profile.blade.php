@@ -1,14 +1,5 @@
 @extends('layouts.head')
 @section('Jumbotron')
-
-@endsection
-{{-- <div class="w-100 text-light p-4 d-flex align-items-center justify-content-center" style="margin-top: 80px; background-color:#3b3b3b; ">
-    <img src="{{ asset('images/hello.png ')}}" style="width:50px"alt="">
-    <p class="mx-4">Hello Nourman</p>
-</div> --}}
-
-    <!-- Jumbotron -->
-
     <div class=" text-center bg-light position-relative shadow" style="margin-top: 58px;height:450px;
     background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cardboard-boxes-and-cleaning-things-for-moving-into-a-new-home-1573953252.jpg?crop=1.00xw:0.758xh;0,0.173xh&resize=1200:*')
     ">
@@ -20,8 +11,8 @@
     </div>
       </div>
     </div>
+@endsection
 
-    <!-- Jumbotron -->
 @section("content")
 {{-- profile page --}}
 
@@ -59,7 +50,9 @@
                           <p class="mb-0">8.5</p>
                         </div>
                       </div>
-
+<div>
+  <a  href="/move_order_request"  class="btn bg-color flex-grow-1"><i class="fa-solid fa-people-carry-box px-2" style="font-size: 20px"></i>Request move order</a>
+</div>
                     </div>
                   </div>
                 </div>
@@ -67,7 +60,7 @@
             </div>
           </div>
 
-
+<section>
           <div class="mask d-flex align-items-center h-100 m-5">
             <div class="container shadow p-5">
                 <div class="section-header"><h2>Your order history</h2></div>
@@ -142,7 +135,7 @@
             </div>
           </div>
 </div>
-
+</section>
 
 
 @endsection
