@@ -43,6 +43,9 @@ Route::get('/about', function () {
 Route::get('/driver_signup', function () {
     return view('pages.driver_signup');
 });
+Route::get('/driver_conditions', function () {
+    return view('pages.driver_conditions');
+});
 Route::get('/move_order_request', function () {
     return view('pages.move_order_request');
 });

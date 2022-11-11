@@ -1,76 +1,81 @@
 @extends('layouts.head')
-@section('Jumbotron')
-    <div class=" text-center bg-light position-relative shadow" style="margin-top: 58px;height:450px;
-    background-image:url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cardboard-boxes-and-cleaning-things-for-moving-into-a-new-home-1573953252.jpg?crop=1.00xw:0.758xh;0,0.173xh&resize=1200:*')
-    ">
-<div style="width:100%; height:100%;position: absolute;top:0; bottom:0; background-color:rgba(0, 0, 0, 0.482)">
-    <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center" >
 
-        <h1 class="my-5 text-light">Request your order move</h1>
-        <h4 class="mb-3 text-light">Subheading</h4>
+<!-- Jumbotron -->
 
-    </div>
-      </div>
-    </div>
-@endsection
+<div class=" text-center bg-light  shadow"
+    style="margin-top: 58px;height:700px;position:relative;
+  background-image:url('http://images.huffingtonpost.com/2016-09-13-1473769006-9036433-Moving.jpg');
+  background-position:center;
+  ">
 
-@section("content")
+    <div style="width:100%; height:100%;position: absolute;top:0; bottom:0; background-color:rgba(0, 0, 0, 0.482)">
+        <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
 
-<div class="container register my-5">
-    <div class="row">
-        <div class="col-md-3 register-left">
-            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-            <h3>Welcome</h3>
-            <p>You are 30 seconds away from earning your own money!</p>
-            {{-- <input type="submit" name="" value="Login"/><br/> --}}
+            <h1 class="my-5 text-light">Request Your Order Moving</h1>
+            <h4 class="mb-3 text-light">Subheading</h4>
         </div>
-        <div class="col-md-9 register-right">
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h3 class="register-heading">Request Your Order Moving</h3>
-                    <div class="row register-form">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="First Name *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Last Name *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your location" value="" />
-                            </div>
 
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your destination" value="" />
-                            </div>
-
-
-
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
-                            </div>
-                            <div>
-                            <span>or</span>  <button class="btn m-2" style="background-color:#906a02;color:white"> get my location</button></div>
-                            <div>
-                            <span>or</span>  <button class="btn  m-2" style="background-color:#906a02;color:white"> select my destination</button></div>
-                            <input type="submit" class="btnRegister"  value="Request now"/>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </div>
-
 </div>
 
+@section('content')
+    <div style="margin-top:-250px !important;margin-bottom:30px ">
+        <section class="w-100 d-flex justify-content-center">
 
+            <div class="card w-50 shadow">
 
+                <form action="">
+                    <div class="row register-form p-5  justify-content-md-center">
 
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="First Name *"
+                                    value="" />
+                                <label for="floatingInput" style="color:grey">First Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Last Name *"
+                                    value="" />
+                                <label for="floatingInput" style="color:grey">Last Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Your location"
+                                    value="" />
+                                <label for="floatingInput" style="color:grey">Your location</label>
+                            </div>
 
+                            {{-- <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="Your destination"
+                                    value="" />
+                                <label for="floatingInput" style="color:grey">Your destination</label>
+                            </div> --}}
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput" style="color:grey">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" id="floatingInput"
+                                    class="form-control" placeholder="Your Phone number" value="" />
+                                <label for="floatingInput" style="color:grey">Phone number</label>
+
+                            </div>
+                            <div>
+                                <span style="color:grey">or</span> <button class="btn m-3 p-2 w-75"
+                                    style="background-color:#906a02;color:white"> get my location</button>
+                            </div>
+                            {{-- <div>
+                                <span style="color:grey">or</span> <button class="btn  m-3 p-2 w-75"
+                                    style="background-color:#906a02;color:white"> select my destination</button>
+                            </div> --}}
+                        </div>
+                        <input type="submit" class="btn w-25 bg-color my-3 justify-content-md-end" value="Request now" />
+
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
 @endsection

@@ -43,7 +43,7 @@
     {{-- here where if choose driver or want to request a move request --}}
         <div class="tab-pane fade show active text-dark" id="home" role="tabpanel" aria-labelledby="home-tab">
            <p>Become a driver and get paid ! </p>
-        <a href="/driver_signup" class="btn bg-color " >
+        <a href="/driver_conditions" class="btn bg-color " >
             <div class="d-flex "><i class="material-icons px-2">people</i> Join Us</div></a>
         </div>
         <div class="tab-pane fade text-dark" id="profile" role="tabpanel" aria-labelledby="profile-tab">
