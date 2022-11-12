@@ -26,7 +26,7 @@ body {
     min-height: 100vh;
 }
 .bg-color {
-    background-color: var(--color-primary);
+    background: var(--color-primary);
     color: white;
 }
 .contact .info-item {
@@ -621,7 +621,7 @@ section {
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .card {
+/* .services .card {
     border: 1px solid rgba(14, 29, 52, 0.15);
     background: #fff;
     position: relative;
@@ -667,7 +667,7 @@ section {
 
 .services .card:hover .card-img img {
     transform: scale(1.1);
-}
+} */
 /*--------------------------------------------------------------
 # Footer Section
 --------------------------------------------------------------*/

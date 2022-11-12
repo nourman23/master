@@ -17,8 +17,8 @@
 @section('content')
     {{-- profile page --}}
     <section class=" profile ">
-        {{-- <div class="container  w-100"> --}}
-        <div class="row mx-5">
+
+        <div class="row mx-5 justify-content-around">
             <div class="col-lg-3 col-md-12 col-sm-12">
                 <!-- Tab navs -->
                 <ul class="nav nav-tabs shadow flex-column p-4 m-2" id="myTab" role="tablist">
@@ -47,12 +47,12 @@
                 <!-- Tab navs -->
             </div>
 
-            <div class="tab-content col-8" id="myTabContent">
+            <div class="tab-content col-8 " id="myTabContent">
                 {{-- here where if choose driver or want to request a move request --}}
                 <div class="tab-pane fade show active text-dark" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="row d-flex justify-content-center ">
                         <div class="col col-lg-10 col-md-12 col-sm-12 ">
-                            {{-- <div class="card " style="border-radius: 15px;"> --}}
+
                             <div class="card-body p-4">
                                 <div class="d-flex text-black">
                                     <div class="flex-shrink-0">
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- </div> --}}
+
                     </div>
                 </div>
                 <div class="tab-pane fade text-dark" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -182,6 +182,6 @@
                 </div>
             </div>
         </div>
-        {{-- </div> --}}
+
     </section>
 @endsection
