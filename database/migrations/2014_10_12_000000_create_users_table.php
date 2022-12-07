@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -20,12 +21,13 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('gender');
-            $table->binary('image')->nullable();
+            $table->boolean('role')->default(0);
+            $table->binary('image');
             $table->rememberToken();
             $table->timestamps();
         });
+        DB::statement(" ALTER TABLE users CHANGE `image` `image` MEDIUMBLOB NULL DEFAULT NULL");
     }
-
     /**
      * Reverse the migrations.
      *

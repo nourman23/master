@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -22,17 +23,18 @@ return new class extends Migration
             $table->integer('age')->min(18);
             $table->integer('rating')->max(5)->nullable();
             $table->bigInteger('phone')->max(10);
-            $table->binary('image')->nullable();
-            $table->binary('license')->nullable();
-            $table->text('driver_feed_backs')->nullable();
-            $table->integer('Years_of_Experience')->nullable()->default(0);
-            $table->integer('trips')->nullable()->default(0);
+            $table->binary('image');
+            $table->binary('license');
+            $table->text('driver_feed_backs');
+            $table->integer('Years_of_Experience')->default(0);
+            $table->integer('trips')->default(0);
             $table->string('address')->nullable();
             $table->string('status')->default('pending');
 
 
             $table->timestamps();
         });
+        DB::statement(" ALTER TABLE users CHANGE `image` `image` MEDIUMBLOB NULL DEFAULT NULL");
     }
 
     /**
