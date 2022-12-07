@@ -26,14 +26,18 @@
                     </li>
                 </ul>
             </div>
-            <div class="p-2">
-                <a class="btn bg-color mr-5" href="/login"><i class="fa fa-light fa-right-to-bracket pr-2"
-                        style=""></i>Login</a>
-            </div>
-            <div class="p-2">
-                <a class="btn rounded-circle bg-color mr-4" href="/profile"><i class="fa fa-light fa-user"></i></a>
-                {{-- <a class="btn bg-color mr-4" href="/profile"><i class="fa fa-solid fa-user-vneck-hair-long"></i></a> --}}
-            </div>
+            @if (Auth::user())
+                <div class="p-2">
+                    <a class="btn rounded-circle bg-color mr-4" href="/profile"><i class="fa fa-light fa-user"></i></a>
+                    {{-- <a class="btn bg-color mr-4" href="/profile"><i class="fa fa-solid fa-user-vneck-hair-long"></i></a> --}}
+                </div>
+            @else
+                <div class="p-2">
+                    <a class="btn bg-color mr-5" href="/login"><i class="fa fa-light fa-right-to-bracket pr-2"
+                            style=""></i>Login</a>
+                </div>
+            @endif
+
 
         </div>
     </nav>

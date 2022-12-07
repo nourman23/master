@@ -12,6 +12,7 @@
     --color-default: #364d59;
     --color-primary: #feb900;
     --color-secondary: #52565e;
+    --lin-color: linear-gradient(to bottom, #ca9400, #feb900);
 }
 
 /* Smooth scroll behavior */
@@ -26,7 +27,8 @@ body {
     min-height: 100vh;
 }
 .bg-color {
-    background: var(--color-primary);
+    background: var(--lin-color);
+
     color: white;
 }
 .contact .info-item {
@@ -136,7 +138,7 @@ body {
 }
 
 .contact .php-email-form button[type="submit"] {
-    background: var(--color-primary);
+    background: var(--lin-color);
     border: 0;
     padding: 10px 35px;
     color: #fff;
@@ -243,7 +245,8 @@ section {
     content: "";
     width: 50px;
     height: 2px;
-    background: var(--color-primary);
+    background: var(--lin-color);
+
     display: inline-block;
 }
 
@@ -352,7 +355,7 @@ section {
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: var(--color-primary);
+    background: var(--lin-color);
 }
 
 @media (max-width: 767px) {
@@ -592,7 +595,7 @@ section {
     content: "";
     height: 100%;
     width: 100%;
-    background: var(--color-primary);
+    background: var(--lin-color);
     border-radius: 50px;
     z-index: 1;
     top: 10px;

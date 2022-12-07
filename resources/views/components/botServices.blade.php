@@ -1,63 +1,10 @@
  <!-- ======= Services Section ======= -->
  <section id="service" class="services pt-0">
      <div class="container" data-aos="fade-up">
-
          <div class="section-header">
-
              <h2>Our Services</h2>
-
          </div>
-
          <div class="row gy-4 justify-content-between">
-
-             {{-- <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                 <div class="card ">
-                     <div class="card-img">
-                         <img src="https://cdn.kulshe.com/uploads/images/original/1708934/1646367964879.jpeg?width=380&aspect_ratio=16:9&quality=30&sharpen=true"
-                             alt="" class="img-fluid">
-                     </div>
-                     <h3><a href="#" class="stretched-link">Storage</a></h3>
-                     <p>Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam
-                         repellendus temporibus itaqueofficiis odit</p>
-                 </div>
-             </div><!-- End Card Item -->
-
-             <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                 <div class="card">
-                     <div class="card-img">
-                         <img src="https://cdn.kulshe.com/uploads/images/original/1708934/1646367964879.jpeg?width=380&aspect_ratio=16:9&quality=30&sharpen=true"
-                             alt="" class="img-fluid">
-                     </div>
-                     <h3><a href="#" class="stretched-link">Logistics</a></h3>
-                     <p>Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt
-                         molestiae dolor ipsam ducimus occaecati nisi</p>
-                 </div>
-             </div><!-- End Card Item -->
-
-             <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                 <div class="card">
-                     <div class="card-img">
-                         <img src="#" alt="" class="img-fluid">
-                     </div>
-                     <h3><a href="#" class="stretched-link">Cargo</a></h3>
-                     <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque
-                         oluptatem aut et molestiae ut et nihil</p>
-                 </div>
-             </div><!-- End Card Item -->
-
-             <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                 <div class="card">
-                     <div class="card-img">
-                         <img src="#" alt="" class="img-fluid">
-                     </div>
-                     <h3><a href="#" class="stretched-link">Trucking</a></h3>
-                     <p>Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque
-                         oluptatem aut et molestiae ut et nihil</p>
-                 </div>
-             </div><!-- End Card Item --> --}}
-
-
-
              <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                  <div class="card-area">
                      <!-- Card: City -->
@@ -72,9 +19,7 @@
                                              <h2 class="card-front__heading">
                                                  Pest control
                                              </h2>
-
                                          </div>
-
                                          <div class="card-front__bt">
                                              <p class="card-front__text-view card-front__text-view--city">
                                                  Read more
@@ -87,7 +32,6 @@
                                      </div>
                                  </div>
                              </div>
-
                              <div class="inside-page">
                                  <div class="inside-page__container">
                                      <h3 class="inside-page__heading inside-page__heading--city">
@@ -100,17 +44,12 @@
                                          environment always
                                          free of all kinds of insects.
                                      </p>
-
                                  </div>
                              </div>
                          </div>
                      </div>
                  </div>
-
              </div>
-
-
-
              <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
                  <div class="card-area">
                      <!-- Card: City -->
@@ -125,9 +64,7 @@
                                              <h2 class="card-front__heading">
                                                  moving furniture
                                              </h2>
-
                                          </div>
-
                                          <div class="card-front__bt">
                                              <p class="card-front__text-view card-front__text-view--city">
                                                  Read more
@@ -140,7 +77,6 @@
                                      </div>
                                  </div>
                              </div>
-
                              <div class="inside-page">
                                  <div class="inside-page__container">
                                      <h3 class="inside-page__heading inside-page__heading--city">
@@ -152,14 +88,12 @@
                                          the transportation process that guarantees the customer that his furniture
                                          or property will not be exposed to any damage or losses.
                                      </p>
-
                                  </div>
                              </div>
                          </div>
                      </div>
                  </div>
              </div>
-
              <div class="col-lg-5 col-md-6" data-aos="fade-up" data-aos-delay="100">
                  <div class="card-area">
                      <!-- Card: City -->
@@ -174,9 +108,7 @@
                                              <h2 class="card-front__heading">
                                                  Furniture dismantling and assembly
                                              </h2>
-
                                          </div>
-
                                          <div class="card-front__bt">
                                              <p class="card-front__text-view card-front__text-view--city">
                                                  Read more
@@ -189,7 +121,6 @@
                                      </div>
                                  </div>
                              </div>
-
                              <div class="inside-page">
                                  <div class="inside-page__container">
                                      <h3 class="inside-page__heading inside-page__heading--city">
@@ -198,7 +129,6 @@
                                      <p class="inside-page__text">
                                          Disassemble and install all the contents of the house.
                                      </p>
-
                                  </div>
                              </div>
                          </div>
@@ -219,9 +149,7 @@
                                              <h2 class="card-front__heading">
                                                  Furniture packaging
                                              </h2>
-
                                          </div>
-
                                          <div class="card-front__bt">
                                              <p class="card-front__text-view card-front__text-view--city">
                                                  Read more
@@ -234,7 +162,6 @@
                                      </div>
                                  </div>
                              </div>
-
                              <div class="inside-page">
                                  <div class="inside-page__container">
                                      <h3 class="inside-page__heading inside-page__heading--city">
@@ -244,19 +171,11 @@
                                          Packaging movables is an easy and simple process that is done very
                                          professionally by our workers in order to preserve the safety of
                                          movables from breakage, scratching or dust and deliver them safely.
-
                                      </p>
-
                                  </div>
                              </div>
                          </div>
                      </div>
                  </div>
-
-
              </div>
-
-
-
-
  </section><!-- End Services Section -->

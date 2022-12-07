@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Ramsey\Uuid\Math\RoundingMode;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\DriverController;
+use App\Http\Controllers\TestimonialsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +38,7 @@ Route::get('/services', function () {
 
 Route::get('/profile', function () {
     return view('pages.profile');
-});
+})->middleware('auth');
 
 Route::get('/about', function () {
     return view('pages.about');
@@ -49,3 +52,12 @@ Route::get('/driver_conditions', function () {
 Route::get('/move_order_request', function () {
     return view('pages.move_order_request');
 });
+Route::post('/user_signup', [UserController::class, 'store']);
+Route::post('/driver_signup', [DriverController::class, 'store']);
+Route::post('/user_login', [UserController::class, 'login']);
+Route::get('/user_logout', [UserController::class, 'logout']);
+Route::post('/testimonial', [TestimonialsController::class, 'store']);
+
+// Route::get('*', function () {
+//     return view('pages.notFound');
+// });

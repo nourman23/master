@@ -177,8 +177,31 @@
                     </div>
 
                 </div>
+
                 <div class="tab-pane fade text-dark" id="settings" role="tabpanel" aria-labelledby="settings-tab">
                     settings ( logout , edit profile , change password )
+                    <a href="/user_logout" class="btn bg-color">logout</a>
+
+                    <form action="/testimonial" method="POST">
+                        @csrf
+                        <div class="rating-css">
+                            <div class="star_icon">
+                                <input type="radio" name="rating" value='1' id='rating1'>
+                                <label for="rating1" class="fa fa-star"></label>
+                                <input type="radio" name="rating" value='2' id='rating2'>
+                                <label for="rating2" class="fa fa-star"></label>
+                                <input type="radio" name="rating" value='3' id='rating3'>
+                                <label for="rating3" class="fa fa-star"></label>
+                                <input type="radio" name="rating" value='4' id='rating4'>
+                                <label for="rating4" class="fa fa-star"></label>
+                                <input type="radio" name="rating" value='5' id='rating5'>
+                                <label for="rating5" class="fa fa-star"></label>
+                            </div>
+                        </div>
+                        <input type="text" name="testimonial">
+                        <button type="submit">Rate</button>
+                    </form>
+
                 </div>
             </div>
         </div>

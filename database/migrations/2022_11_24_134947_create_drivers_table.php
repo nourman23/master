@@ -13,15 +13,24 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('drivers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('gender');
+            $table->integer('age')->min(18);
+            $table->integer('rating')->max(5)->nullable();
+            $table->bigInteger('phone')->max(10);
             $table->binary('image')->nullable();
-            $table->rememberToken();
+            $table->binary('license')->nullable();
+            $table->text('driver_feed_backs')->nullable();
+            $table->integer('Years_of_Experience')->nullable()->default(0);
+            $table->integer('trips')->nullable()->default(0);
+            $table->string('address')->nullable();
+            $table->string('status')->default('pending');
+
+
             $table->timestamps();
         });
     }
@@ -33,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('drivers');
     }
 };
