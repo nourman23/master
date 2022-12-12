@@ -24,8 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 // Route::group(['middleware' => ['web']], function () {
 Route::post('/reactUserLogin', [UserController::class, 'LoginFromReact']);
-Route::get('/AdminLogin', [AdminController::class, 'index']);
-Route::post('/reactAdminLogin', [AdminController::class, 'LoginFromReact']);
+// Route::get('/AdminLogin', [AdminController::class, 'index']);
+// Route::post('/reactAdminLogin', [AdminController::class, 'LoginFromReact']);
 Route::post('/reactUserRegister', [UserController::class, 'storeFromReact']);
 Route::post('/reactDriverRegister', [DriverController::class, 'storeFromReact']);
 Route::post('/newTestmonial', [TestimonialsController::class, 'storeFromReact']);

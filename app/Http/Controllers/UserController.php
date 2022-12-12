@@ -150,14 +150,27 @@ class UserController extends Controller
             ], 401);
         }
 
-        $user = User::where('email', $request['email'])->firstOrFail();
-        $token = $user->createToken('authToken')->plainTextToken;
+        if (Auth::attempt($request->only('email', 'password')) && Gate::allows('admin')) {
+            $user = User::where('email', $request['email'])->firstOrFail();
+            $token = $user->createToken('authToken')->plainTextToken;
+            return response()->json([
+                'user_info' => Auth::user(),
+                'access_token' => $token,
+                'token_type' => 'Bearer',
+                'role' => 'admin'
+            ]);
+        } else {
+            $user = User::where('email', $request['email'])->firstOrFail();
+            $token = $user->createToken('authToken')->plainTextToken;
 
-        return response()->json([
-            'user_info' => Auth::user(),
-            'access_token' => $token,
-            'token_type' => 'Bearer',
-        ]);
+            return response()->json([
+                'user_info' => Auth::user(),
+                'access_token' => $token,
+                'token_type' => 'Bearer',
+                'role' => 'user'
+
+            ]);
+        }
     }
 
 
@@ -171,23 +184,23 @@ class UserController extends Controller
     }
     public function storeFromReact(Request $request)
     {
+
         $request->validate(
             [
                 'name' => 'required|min:3',
                 'email' => 'required|email',
                 'gender' => 'required',
                 'password' => 'required|confirmed|min:6',
-                'image' => 'required|mimes:jpeg,png,jpg,gif,svg'
+                // 'image' => 'required|mimes:jpeg,png,jpg,gif,svg'
             ]
         );
-
-        $image = base64_encode(file_get_contents($request->file('image')));
+        // $image = base64_encode(file_get_contents($request->file('image')));
         $user = User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'gender' => $request->input('gender'),
             'password' => Hash::make($request->input('password')),
-            'image' => $image,
+            // 'image' => $image,
         ]);
         $user->save();
         auth()->login($user);
