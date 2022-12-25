@@ -1,0 +1,27 @@
+.row {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.all {
+  width: 500px;
+  margin: 160px auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: white;
+}
+.inputF input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  padding: 10px;
+  border-radius: 7px;
+}
+body {
+  background-image: url("https://img.freepik.com/premium-photo/tape-measure-obese-people-pink-background-soft-focus_109549-3696.jpg?w=2000");
+  background-size: cover;
+  background-repeat: no-repeat;
+  letter-spacing: 3px;
+}
