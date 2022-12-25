@@ -66,20 +66,27 @@ body {
   padding: 20px 0 30px 0;
 }
 
-.contact .info-item ion-icon {
+.contact .info-item ion-icon,
+.cond i {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 35px;
-  height: 35px;
-  font-size: 20px;
   padding: 7px;
   line-height: 0;
   color: var(--color-primary);
   border-radius: 50%;
-  border: 2px dotted #ffd565;
 }
-
+.cond i {
+  width: 75px;
+  height: 70px;
+  border: 2px dotted var(--color-primary);
+}
+.contact .info-item ion-icon {
+  border: 2px dotted #ffd565;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+}
 .contact .info-item h3 {
   font-size: 20px;
   color: #6c757d;

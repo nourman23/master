@@ -1,5 +1,5 @@
 import React from "react";
-
+import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 export const TopServices = () => {
   return (
     <>
@@ -13,7 +13,7 @@ export const TopServices = () => {
             >
               <div className="service-item  position-relative">
                 <div className="icon">
-                  <i className="fa-solid fa-mountain-city" />
+                  <i className="fa-solid fa-phone" />
                 </div>
                 <h3>Nesciunt Mete</h3>
                 <p>
@@ -31,7 +31,9 @@ export const TopServices = () => {
             >
               <div className=" service-item position-relative">
                 <div className="icon">
-                  <i className="fa-solid fa-arrow-up-from-ground-water" />
+                  <i>
+                    <AccessTimeFilledIcon sx={{ fontSize: 50 }} />
+                  </i>
                 </div>
                 <h3>Eosle Commodi</h3>
                 <p>
@@ -48,7 +50,7 @@ export const TopServices = () => {
             >
               <div className="service-item position-relative">
                 <div className="icon">
-                  <i className="fa-solid fa-compass-drafting" />
+                  <i className="fa fa-light fa-truck-ramp-box" />
                 </div>
                 <h3>Ledo Markt</h3>
                 <p>

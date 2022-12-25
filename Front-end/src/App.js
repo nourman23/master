@@ -16,7 +16,6 @@ import Login from "./auth/userLogin";
 import Register from "./auth/Register";
 import DriverRegister from "./auth/DriverRegister";
 import { RequireAuth } from "react-auth-kit";
-import { DashHome } from "./Dashboard/home";
 import { useAuthUser } from "react-auth-kit";
 import { Provider } from "react-redux";
 import { store } from "./stors/store";

@@ -7,7 +7,11 @@ import Jumbotron from "../components/Jumbotron";
 function About() {
   return (
     <>
-      <Jumbotron title="About Us" subTitle="About" />
+      <Jumbotron
+        title="About Us"
+        subTitle="About"
+        url="https://www.newhomesource.com/learn/wp-content/uploads/2020/11/professional-movers.png"
+      />
 
       <TopAbout />
       <OurWork />

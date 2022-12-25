@@ -10,8 +10,9 @@ export const TopAbout = () => {
               className="about-image"
               style={{
                 backgroundImage:
-                  'url("https://dynamic.whathouse.com/news/RemovalsFirm.jpg")',
+                  'url("https://movingfurniture-kw.com/wp-content/uploads/2022/07/7.jpg")',
                 backgroundSize: "cover",
+                boxShadow: " rgba(0, 0, 0, 0.35) 0px 5px 15px",
               }}
             >
               {/* <img

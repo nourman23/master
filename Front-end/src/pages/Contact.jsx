@@ -4,7 +4,11 @@ import Jumbotron from "../components/Jumbotron";
 function Contact() {
   return (
     <>
-      <Jumbotron title="Contact Us" subTitle="Contact" />
+      <Jumbotron
+        title="Contact Us"
+        subTitle="Contact"
+        url="https://i.pinimg.com/736x/f4/12/9c/f4129c3bf345da76da664673fb2de2a8--removal-services-free-quotes.jpg"
+      />
 
       <section id="contact" className="contact">
         <div className="container" data-aos="fade-up" data-aos-delay="100">

@@ -65,7 +65,11 @@ export const MoveOrderRequest = () => {
   };
   return (
     <>
-      <Jumbotron title="Request Your Order Moving" subTitle="Request" />
+      <Jumbotron
+        title="Request Your Order Moving"
+        subTitle="Request"
+        url="https://cmsplatform.blob.core.windows.net/wwwgainesvillemoversusacom/gallery/original/6ec2f61b-7508-4760-9b2f-4d6fb36e4c6e.jpg"
+      />
 
       <div style={{ marginTop: "-250px !important", marginBottom: "30px" }}>
         <section className="w-100 d-flex justify-content-center">

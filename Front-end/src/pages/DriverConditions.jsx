@@ -8,7 +8,7 @@ export const DriverConditions = () => {
       <Jumbotron
         title="Drive with Mover and be a Captain"
         subTitle="driver conditions"
-        height="300px"
+        url="https://www.cft.org/sites/main/files/imagecache/lightbox/main-images/pandemic-bus-driver_is-1321183981.jpg"
       />
 
       <section>
@@ -18,9 +18,9 @@ export const DriverConditions = () => {
         <div className="container">
           <div className="row ">
             <div className="col col-lg-4 col-md-7 col-sm-12  ">
-              <div className="card shadow h-100 border-0 mx-2 p-2 justify-content-center align-items-center">
+              <div className="card shadow cond h-100 border-0 mx-2 p-2 justify-content-center align-items-center">
                 <i
-                  className="fas fa-duotone fa-business-time m-2"
+                  className="fas fa-duotone fa-business-time m-2 text-secondary"
                   style={{ fontSize: "40px" }}
                 />
                 <div className="card-title text-center p-3">
@@ -29,9 +29,9 @@ export const DriverConditions = () => {
               </div>
             </div>
             <div className="col col-lg-4 col-md-7 col-sm-12 ">
-              <div className="card shadow h-100 border-0 mx-2 p-2 justify-content-center align-items-center">
+              <div className="card shadow cond h-100 border-0 mx-2 p-2 justify-content-center align-items-center">
                 <i
-                  className="fas fa-duotone fa-sack-dollar m-2"
+                  className="fas fa-duotone fa-sack-dollar m-2 text-secondary"
                   style={{ fontSize: "40px" }}
                 />
                 <div className="card-title text-center p-3">
@@ -40,9 +40,9 @@ export const DriverConditions = () => {
               </div>
             </div>
             <div className="col col-lg-4 col-md-7 col-sm-12 ">
-              <div className="card shadow h-100 border-0 mx-2 p-2 justify-content-center align-items-center">
+              <div className="card shadow cond h-100 border-0 mx-2 p-2 justify-content-center align-items-center">
                 <i
-                  className="fas fa-duotone fa-face-smile m-2"
+                  className="fas fa-duotone fa-face-smile m-2 text-secondary"
                   style={{ fontSize: "40px" }}
                 />
                 <div className="card-title text-center p-3">
