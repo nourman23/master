@@ -26,12 +26,15 @@ return new class extends Migration
             $table->bigInteger('user_id')->unsigned();
             $table->string('name');
             $table->string('email');
-            $table->date('date');
+            $table->string('status')->default('pending');
             $table->bigInteger('phone')->max(10);
-            $table->bigInteger('location_latitude')->max(6);
-            $table->bigInteger('location_longitude')->max(6);
-            $table->bigInteger('destination_latitude')->max(6);
-            $table->bigInteger('destination_longitude')->max(6);
+            // $table->bigInteger('location_latitude')->max(6);
+            // $table->bigInteger('location_longitude')->max(6);
+            $table->string('location');
+            // $table->bigInteger('destination_latitude')->max(6);
+            // $table->bigInteger('destination_longitude')->max(6);
+            $table->string('destination');
+
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')

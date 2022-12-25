@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use App\Http\Resources\UserResources;
 
 class UserController extends Controller
 {
@@ -21,6 +22,13 @@ class UserController extends Controller
         $user = User::all();
         return response()->json([
             'data' => $user
+        ]);
+    }
+    public function singleUser($id)
+    {
+        $user = User::find($id);
+        return response()->json([
+            'user' => $user
         ]);
     }
 
@@ -47,7 +55,8 @@ class UserController extends Controller
         // dd($image);
         $request->validate(
             [
-                'name' => 'required|min:3',
+                'first_name' => 'required|min:3',
+                'last_name' => 'required',
                 'email' => 'required|email',
                 'gender' => 'required',
                 'password' => 'required|confirmed|min:6',
@@ -58,7 +67,8 @@ class UserController extends Controller
         // dd($data);
         $image = base64_encode(file_get_contents($request->file('image')));
         $user = User::create([
-            'name' => $request->input('name'),
+            'first_name' => $request->input('first_name'),
+            'last_name' => $request->input('last_name'),
             'email' => $request->input('email'),
             'gender' => $request->input('gender'),
             'password' => $request->input('password'),
@@ -98,9 +108,29 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $id = $request->id;
+        $user = User::find($id);
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'image' => 'required',
+        ]);
+
+        $image = base64_encode(file_get_contents($request->file('image')));
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->email = $request->email;
+        $user->image = $image;
+
+        $user->save();
+
+        return response()->json([
+            'user' => $user,
+
+        ]);
     }
 
     /**
@@ -111,7 +141,12 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::find($id)->delete();
+        $users = User::all();
+        return response()->json([
+            'users' => $users,
+            'message' => "User deleted successfuly"
+        ]);
     }
 
     public function login(Request $request)
@@ -123,7 +158,6 @@ class UserController extends Controller
         ]);
         $remember_me = $request->has('remember_me') ? true : false;
 
-        // dd(Auth::attempt($formFields, $remember_me));
         // if (Auth::attempt($formFields) && Gate::allows('admin')) {
         //     $request->session()->regenerate();
 
@@ -187,25 +221,61 @@ class UserController extends Controller
 
         $request->validate(
             [
-                'name' => 'required|min:3',
+                'first_name' => 'required|min:3',
+                'last_name' => 'required|min:3',
                 'email' => 'required|email',
                 'gender' => 'required',
                 'password' => 'required|confirmed|min:6',
-                // 'image' => 'required|mimes:jpeg,png,jpg,gif,svg'
+                'image' => 'required|mimes:jpeg,png,jpg,gif,svg'
             ]
         );
-        // $image = base64_encode(file_get_contents($request->file('image')));
+        $image = base64_encode(file_get_contents($request->file('image')));
         $user = User::create([
-            'name' => $request->input('name'),
+            'first_name' => $request->input('first_name'),
+            'last_name' => $request->input('last_name'),
             'email' => $request->input('email'),
             'gender' => $request->input('gender'),
             'password' => Hash::make($request->input('password')),
-            // 'image' => $image,
+            'image' => $image,
         ]);
         $user->save();
         auth()->login($user);
         return response()->json([
             'data' => $user
+        ]);
+    }
+
+
+
+    public function LoginByGoogle(Request $request)
+    {
+
+        $user = User::where('email', $request->email)->first();
+        if ($user) {
+            return $this->success([
+                'user' => new UserResources(User::where('email', $user->email)->first()),
+                'token' => $user->createToken('API Token of ' . $user->name)->plainTextToken //for return only plainTextToken without it will return all token record from personal_access_tokens
+            ]);
+        }
+
+        $formFields = $request->validate(
+            [
+                'first_name' => ['required', 'string', 'max:255'],
+                'last_name' => ['required', 'string'],
+                'image' => ['required', 'string'],
+                'email' => ['required', 'email', 'unique:users'],
+                'google_id' => ['required', 'numeric'],
+            ]
+        );
+
+
+        // Create user
+        $user = User::create($formFields);
+
+        return $this->success([
+            'user' => new UserResources(User::where('email', $user->email)->first()),
+            'token' => $user->createToken('API Token of ' . $user->name)->plainTextToken //for return only plainTextToken without it will return all token record from personal_access_tokens
+
         ]);
     }
 }

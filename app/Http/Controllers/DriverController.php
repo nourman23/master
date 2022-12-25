@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Drivers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class DriverController extends Controller
 {
@@ -14,9 +15,9 @@ class DriverController extends Controller
      */
     public function index()
     {
-        $driver = Drivers::all();
+        $drivers = Drivers::all();
         return response()->json([
-            'data' => $driver
+            'data' => $drivers
         ]);
     }
 
@@ -41,7 +42,8 @@ class DriverController extends Controller
         // dd($request->phone);
         $request->validate(
             [
-                'name' => 'required|min:3',
+                'first_name' => 'required|min:3',
+                'last_name' => 'required',
                 'email' => 'required|email',
                 'gender' => 'required',
                 'password' => 'required|confirmed|min:6',
@@ -58,7 +60,8 @@ class DriverController extends Controller
 
 
         $user = Drivers::create([
-            'name' => $request->input('name'),
+            'first_name' => $request->input('first_name'),
+            'last_name' => $request->input('last_name'),
             'email' => $request->input('email'),
             'gender' => $request->input('gender'),
             'password' => $request->input('password'),
@@ -74,7 +77,8 @@ class DriverController extends Controller
     {
         $request->validate(
             [
-                'name' => 'required|min:3',
+                'first_name' => 'required|min:3',
+                'last_name' => 'required',
                 'email' => 'required|email',
                 'gender' => 'required',
                 'password' => 'required|confirmed|min:6',
@@ -89,10 +93,11 @@ class DriverController extends Controller
         $license = base64_encode(file_get_contents($request->file('license')));
 
         $user = Drivers::create([
-            'name' => $request->input('name'),
+            'first_name' => $request->input('first_name'),
+            'last_name' => $request->input('last_name'),
             'email' => $request->input('email'),
             'gender' => $request->input('gender'),
-            'password' => $request->input('password'),
+            'password' => Hash::make($request->input('password')),
             'age' => $request->input('age'),
             'phone' => $request->input('phone'),
             'image' => $image,
@@ -113,6 +118,21 @@ class DriverController extends Controller
     public function show($id)
     {
         //
+    }
+    public function approve($request)
+    {
+        $request->status = 'approved';
+        $request->save();
+
+        return $this->success('', 'Request approved successsfully');
+    }
+
+    public function deny($request)
+    {
+        $request->status = 'rejected';
+        $request->save();
+
+        return $this->success('', 'Request rejected successsfully');
     }
 
     /**
@@ -146,6 +166,22 @@ class DriverController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Drivers::find($id)->delete();
+        $drivers =  Drivers::all();
+        return response()->json([
+            'drivers' => $drivers,
+            'message' => "Driver deleted successfuly"
+        ]);
+    }
+
+    public function status(Request $request)
+    {
+        $driver = Drivers::find($request->driver['id']);
+        $status = $request->status;
+        $driver->status =   $status;
+        $driver->save();
+        return response()->json([
+            'message' => "Driver $status successsfully"
+        ]);
     }
 }

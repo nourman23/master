@@ -22,7 +22,6 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->text('testimonial');
-            $table->date('date');
             $table->integer('stars')->max(5);
             $table->string('status')->default('pending');
             $table->foreign('user_id')

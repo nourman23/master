@@ -15,7 +15,6 @@ class Requests extends Model
         'phone',
         'location',
         'destination',
-        'date'
 
     ];
     public function user()

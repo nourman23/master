@@ -16,7 +16,8 @@ return new class extends Migration
     {
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('gender');
@@ -25,13 +26,11 @@ return new class extends Migration
             $table->bigInteger('phone')->max(10);
             $table->binary('image');
             $table->binary('license');
-            $table->text('driver_feed_backs');
+            $table->text('driver_feed_backs')->nullable();
             $table->integer('Years_of_Experience')->default(0);
             $table->integer('trips')->default(0);
             $table->string('address')->nullable();
             $table->string('status')->default('pending');
-
-
             $table->timestamps();
         });
         DB::statement(" ALTER TABLE users CHANGE `image` `image` MEDIUMBLOB NULL DEFAULT NULL");

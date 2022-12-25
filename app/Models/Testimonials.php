@@ -12,6 +12,7 @@ class Testimonials extends Model
         'testimonial',
         'stars',
         'user_id',
+        'status',
         'date'
 
     ];

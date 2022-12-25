@@ -16,7 +16,17 @@ class TestimonialsController extends Controller
      */
     public function index()
     {
-        //
+        $Testimonials = Testimonials::where('status', 'approved')->get();
+        return response()->json([
+            'data' => $Testimonials
+        ]);
+    }
+    public function AdminIndex()
+    {
+        $Testimonials = Testimonials::all();
+        return response()->json([
+            'data' => $Testimonials
+        ]);
     }
 
     /**
@@ -73,7 +83,6 @@ class TestimonialsController extends Controller
         $request->validate(
             [
                 'user_id' => 'required',
-
                 'testimonial' => 'required',
                 'rating' => 'required'
             ]
@@ -131,8 +140,25 @@ class TestimonialsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function status(Request $request)
+    {
+        $testimonial = Testimonials::find($request->testimonial['id']);
+        $status = $request->status;
+        $testimonial->status =   $status;
+        $testimonial->save();
+        return response()->json([
+            'message' => "Testimonial $status successsfully"
+        ]);
+    }
+
+
     public function destroy($id)
     {
-        //
+        Testimonials::find($id)->delete();
+        $Testimonials = Testimonials::all();
+        return response()->json([
+            'testimonials' => $Testimonials,
+            'message' => "Testimonial deleted successfuly"
+        ]);
     }
 }
