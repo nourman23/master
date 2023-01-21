@@ -54,7 +54,7 @@ const Login = () => {
           })
         ) {
           setLoading(false)
-          return navigate('/#/Data/Users')
+          return navigate('/Data/Users')
         }
       })
       .catch(function (error) {

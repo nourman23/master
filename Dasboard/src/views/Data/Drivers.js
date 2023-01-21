@@ -122,6 +122,7 @@ const Drivers = () => {
         console.log(error)
       })
   }
+  let style
   return (
     <CTable align="middle" className="mb-0 border" hover responsive>
       <CTableHead color="light">
@@ -130,53 +131,66 @@ const Drivers = () => {
             <CIcon icon={cilPeople} />
           </CTableHeaderCell>
           <CTableHeaderCell>Driver</CTableHeaderCell>
-          <CTableHeaderCell>status</CTableHeaderCell>
-          <CTableHeaderCell>Delete</CTableHeaderCell>
+          <CTableHeaderCell className="text-center">status</CTableHeaderCell>
+          <CTableHeaderCell className="text-center">Delete</CTableHeaderCell>
         </CTableRow>
       </CTableHead>
       <CTableBody>
-        {Drivers?.map((driver, index) => (
-          <CTableRow v-for="item in tableItems" key={index}>
-            <CTableDataCell className="text-center">
-              <CAvatar size="md" src={driver.image} />
-            </CTableDataCell>
-            <CTableDataCell>
-              <div>{driver.first_name + ' ' + driver.last_name}</div>
-              {/* <div className="small text-medium-emphasis">
+        {Drivers?.map(
+          (driver, index) => (
+            driver.status == 'rejected'
+              ? (style = { borderLeft: '2px red solid' })
+              : (style = { borderLeft: 'none' }),
+            (
+              <CTableRow className="mt-4  " v-for="item in tableItems" key={index} style={style}>
+                <CTableDataCell className="text-center">
+                  {/* <CAvatar size="md" src={driver.image} /> */}
+                  <CAvatar size="md" src={`data:image/jpeg;base64,${driver.image}`} />
+                </CTableDataCell>
+                <CTableDataCell>
+                  <div>{driver.first_name + ' ' + driver.last_name}</div>
+                  {/* <div className="small text-medium-emphasis">
                 <span>{item.user.new ? 'New' : 'Recurring'}</span> | Registered:{' '}
                 {item.user.registered}
               </div> */}
-            </CTableDataCell>
-            <CTableDataCell>
-              <CFormSelect
-                size="sm"
-                onChange={(e) => {
-                  handleChangeStatus(driver, e.target.value)
-                }}
-                className="mb-3"
-                aria-label="Small select example"
-                value={driver.status}
-              >
-                {options.map((option, i) => {
-                  return (
-                    <option key={i} value={option}>
-                      {option}
-                    </option>
-                  )
-                })}
-              </CFormSelect>
-            </CTableDataCell>
-            <CTableDataCell>
-              <CIcon
-                icon={cilTrash}
-                style={{ cursor: 'pointer', color: 'red' }}
-                onClick={() => {
-                  handleDeleteDriver(driver.id)
-                }}
-              />
-            </CTableDataCell>
-          </CTableRow>
-        ))}
+                </CTableDataCell>
+                <CTableDataCell>
+                  <CFormSelect
+                    size="sm"
+                    onChange={(e) => {
+                      handleChangeStatus(driver, e.target.value)
+                    }}
+                    aria-label="Small select example"
+                  >
+                    {options.map((option, i) => {
+                      if (option === driver.status) {
+                        return (
+                          <option key={i} value={option} selected>
+                            {option}
+                          </option>
+                        )
+                      } else
+                        return (
+                          <option key={i} value={option}>
+                            {option}
+                          </option>
+                        )
+                    })}
+                  </CFormSelect>
+                </CTableDataCell>
+                <CTableDataCell className="text-center">
+                  <CIcon
+                    icon={cilTrash}
+                    style={{ cursor: 'pointer', color: 'red' }}
+                    onClick={() => {
+                      handleDeleteDriver(driver.id)
+                    }}
+                  />
+                </CTableDataCell>
+              </CTableRow>
+            )
+          ),
+        )}
       </CTableBody>
     </CTable>
   )

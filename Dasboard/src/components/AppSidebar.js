@@ -28,10 +28,15 @@ const AppSidebar = () => {
       onVisibleChange={(visible) => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
+      style={{ backgroundColor: '#52565e', color: 'white' }}
     >
-      <CSidebarBrand className="d-none d-md-flex" to="/">
-        <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} />
+      <CSidebarBrand className="d-none d-md-flex flex-column" to="/">
+        {/* <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} /> */}
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
+        <p className="mb-2 mt-3" style={{ fontSize: '30px' }}>
+          MOVER
+        </p>
+        <small className="text-secondary mb-4">Admin Dashboard</small>
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>

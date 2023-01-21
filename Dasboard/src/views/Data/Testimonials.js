@@ -142,6 +142,7 @@ const Testimonials = () => {
         console.log(error)
       })
   }
+  let style
   return (
     <CTable align="middle" className="mb-0 border" hover responsive>
       <CTableHead color="light">
@@ -151,17 +152,21 @@ const Testimonials = () => {
           </CTableHeaderCell>
           <CTableHeaderCell>User name</CTableHeaderCell>
           <CTableHeaderCell style={{ width: '400px' }}>Testimonial</CTableHeaderCell>
-          <CTableHeaderCell>status</CTableHeaderCell>
-          <CTableHeaderCell>Delete</CTableHeaderCell>
+          <CTableHeaderCell className="text-center">status</CTableHeaderCell>
+          <CTableHeaderCell className="text-center">Delete</CTableHeaderCell>
         </CTableRow>
       </CTableHead>
       <CTableBody>
         {Testimonials?.map((testimonial, index) => {
           user = users.find((usr) => usr.id === testimonial.user_id)
+          testimonial.status == 'rejected'
+            ? (style = { borderLeft: '2px red solid' })
+            : (style = { borderLeft: 'none' })
           return (
-            <CTableRow v-for="item in tableItems" key={index}>
+            <CTableRow v-for="item in tableItems" key={index} style={style}>
               <CTableDataCell className="text-center">
-                <CAvatar size="md" src={user.image} />
+                {/* <CAvatar size="md" src={user.image} /> */}
+                <CAvatar size="md" src={`data:image/jpeg;base64,${user.image}`} />
               </CTableDataCell>
               <CTableDataCell>
                 <div>{user.first_name + ' ' + user.last_name}</div>
@@ -198,7 +203,7 @@ const Testimonials = () => {
                   })}
                 </CFormSelect>
               </CTableDataCell>
-              <CTableDataCell>
+              <CTableDataCell className="text-center">
                 <CIcon
                   icon={cilTrash}
                   style={{ cursor: 'pointer', color: 'red' }}
