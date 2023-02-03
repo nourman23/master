@@ -15,7 +15,7 @@ import { useAuthUser } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
 import { useSignIn } from "react-auth-kit";
 import Swal from "sweetalert2";
-
+import { ProfileComponent } from "../components/ProfileComponent";
 export const EditProfile = () => {
   const navigate = useNavigate();
   const SignIn = useSignIn();
@@ -93,13 +93,17 @@ export const EditProfile = () => {
         handleEditProfile(e);
       }}
     >
-      <MDBContainer className="pt-1 pb-5 h-100">
-        <MDBCard className="col-5 mx-auto">
+      <MDBContainer className="pt-1 pb-5 h-100 d-flex ">
+        {/* <MDBCard className="col-5 mx-auto"> */}
+        <div className="col-5">
+          <ProfileComponent />
+        </div>
+        {/* </MDBCard> */}
+        <MDBCard className="col-10">
           <MDBRow className="g-0 ">
             <MDBCol className="col-lg-12 ">
               <MDBCardBody className="d-flex flex-column pb-0 ">
                 <div className="d-flex flex-column mt-2 align-items-center">
-                  {/* <img src={logo} alt="" style={{ width: 50 }} /> */}
                   <p className="h3 fw-bold mb-0">MOVER</p>
                 </div>
                 <h5
@@ -125,6 +129,7 @@ export const EditProfile = () => {
                   onChange={(e) => {
                     setFirstName(e.target.value);
                   }}
+                  style={{ color: "black !important" }}
                 />
                 <MDBInput
                   wrapperClass="mb-4"
@@ -227,7 +232,7 @@ export const EditProfile = () => {
 
                 {!loading ? (
                   <Button
-                    className="mb-2 px-5 bg-dark border-dark"
+                    className="mb-2 px-5 bg-dark border-dark mb-4"
                     size="md"
                     type="submit"
                   >
@@ -235,7 +240,7 @@ export const EditProfile = () => {
                   </Button>
                 ) : (
                   <Button
-                    className="mb-2 px-5 bg-dark border-dark"
+                    className="mb-2 px-5 bg-dark border-dark mb-4"
                     size="md"
                     type="submit"
                     disabled

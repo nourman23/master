@@ -62,14 +62,10 @@ function Login() {
           })
         ) {
           setLoading(false);
-          if (res.data.role == "admin") {
-            window.location.href = "http://localhost:3001/";
-          } else return navigate("/");
+          return navigate("/");
         }
       })
       .catch(function (error) {
-        // console.log(error);
-
         setLoading(false);
 
         setMessage((prev) => ({

@@ -15,11 +15,11 @@ export const TopServices = () => {
                 <div className="icon">
                   <i className="fa-solid fa-phone" />
                 </div>
-                <h3>Nesciunt Mete</h3>
+                <h3 className="mt-4">Contact us</h3>
                 <p>
-                  Provident nihil minus qui consequatur non omnis maiores. Eos
-                  accusantium minus dolores iure perferendis tempore et
-                  consequatur.
+                  Contact us with your inquiry or suggestion within 24 hours,
+                  seven days a week. We are at your service at all times and at
+                  any time .
                 </p>
               </div>
             </div>
@@ -31,14 +31,14 @@ export const TopServices = () => {
             >
               <div className=" service-item position-relative">
                 <div className="icon">
-                  <i>
-                    <AccessTimeFilledIcon sx={{ fontSize: 50 }} />
-                  </i>
+                  <i className="fa fa-light fa-truck-ramp-box" />
                 </div>
-                <h3>Eosle Commodi</h3>
+                <h3>Goodbye to the trouble of moving furniture</h3>
                 <p>
-                  Ut autem aut autem non a. Sint sint sit facilis nam iusto
-                  sint. Libero corrupti neque eum hic non ut nesciunt dolorem.
+                  Our mission is to move your furniture easily and without
+                  getting tired. With MOVER, moving furniture has become without
+                  any fatigue or trouble. We move and pack furniture as an
+                  integrated service to the fullest.
                 </p>
               </div>
             </div>
@@ -50,12 +50,15 @@ export const TopServices = () => {
             >
               <div className="service-item position-relative">
                 <div className="icon">
-                  <i className="fa fa-light fa-truck-ramp-box" />
+                  <i>
+                    <AccessTimeFilledIcon sx={{ fontSize: 50 }} />
+                  </i>
                 </div>
-                <h3>Ledo Markt</h3>
+                <h3 className="mt-4">Short time</h3>
                 <p>
-                  Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
-                  Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.
+                  The packaging and transportation process takes place within a
+                  short time, and the length of time in transportation depends
+                  on the distance the furniture is moved to .
                 </p>
               </div>
             </div>

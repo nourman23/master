@@ -5,46 +5,6 @@ import Carousel from "react-material-ui-carousel";
 export const OurWork = () => {
   return (
     <section>
-      {/* <div className="section-header">
-        <h2>Our work</h2>
-        <p>
-          Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum
-          nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti
-        </p>
-      </div> 
-      <div className="container">
-        <div className="row">
-          <div className="four col-md-3">
-            <div className="counter-box ">
-              <i className="fa fa-thumbs-o-up" />
-              <span className="counter">2147</span>
-              <p>Happy Customers</p>
-            </div>
-          </div>
-          <div className="four col-md-3">
-            <div className="counter-box">
-              <i className="fa fa-group" />
-              <span className="counter">3275</span>
-              <p>Registered Members</p>
-            </div>
-          </div>
-          <div className="four col-md-3">
-            <div className="counter-box">
-              <i className="fa fa-shopping-cart" />
-              <span className="counter">289</span>
-              <p>Available Products</p>
-            </div>
-          </div>
-          <div className="four col-md-3">
-            <div className="counter-box">
-              <i className="fa  fa-user" />
-              <span className="counter">1563</span>
-              <p>Saved Trees</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="container-xxl py-5">
         <div className="container py-5">
           <div className="row g-5">
@@ -52,14 +12,28 @@ export const OurWork = () => {
               <h3 className="text-secondary text-uppercase mb-3">
                 <b> Some Facts</b>
               </h3>
-              <h1 className="mb-4" style={{ fontSize: "30px" }}>
+              {/* <h1 className="mb-4" style={{ fontSize: "30px" }}>
                 <b className="text-primary">#1</b> Place To Manage All Of Your
                 Shipments
-              </h1>
+              </h1> */}
+              <p
+                className="display-3 animated text-default slideInDown mb-4"
+                style={{ fontSize: "40px" }}
+              >
+                #1 Place For helping you
+                <span className="text-primary"> move </span>
+                your furniture
+              </p>
               <p className="mb-5">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
+                MOVER is always keen to fulfill the customer's desires, fulfill
+                his requests in the most complete manner, and implement them on
+                the specified date without any delay, transferring all his
+                possessions professionally and safely, preserving them,
+                delivering them to the required place in peace, and providing
+                the highest levels of service. Your luggage will be moved
+                anywhere in the Kingdom. With us, your luggage remains safe and
+                with a guarantee against any damage, loss or waste of time, and
+                your luggage is transported in peace of mind and reassurance
               </p>
               <div className="d-flex align-items-center">
                 <i className="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
@@ -86,7 +60,8 @@ export const OurWork = () => {
                     className="bg-secondary p-4 wow fadeIn"
                     data-wow-delay="0.5s"
                   >
-                    <i className="fa fa-ship fa-2x text-white mb-3"></i>
+                    {/* <i className="fa fa-ship fa-2x text-white mb-3"></i> */}
+                    <i className="fa fa-2x fa-light fa-truck-ramp-box text-white mb-3" />
                     <h2 className="text-white mb-2">
                       <CountUp end={4532} enableScrollSpy={true} />
                     </h2>

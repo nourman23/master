@@ -59,9 +59,7 @@ export const OrderHistory = () => {
                 </td>
                 <td>{request.destination}</td>
                 <td>{request.status}</td>
-                <td>
-                  <RateModal />
-                </td>
+                <td>{request.status === "approved" && <RateModal />}</td>
               </tr>
             );
           })}

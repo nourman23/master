@@ -706,6 +706,3 @@ footer {
 .nav-link {
   font-size: 17px;
 }
-.active {
-  color: var(--color-primary) !important;
-}

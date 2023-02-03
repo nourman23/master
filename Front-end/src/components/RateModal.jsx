@@ -8,6 +8,7 @@ import { MDBInput } from "mdb-react-ui-kit";
 import { useAuthUser } from "react-auth-kit";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export const RateModal = () => {
   const [rate, setRate] = useState(1);
@@ -18,15 +19,6 @@ export const RateModal = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const auth = useAuthUser();
-  // const [date, setDate] = useState("");
-
-  // useEffect(() => {
-  //   let theDate = new Date();
-  //   let year = theDate.getFullYear();
-  //   let month = theDate.getMonth() + 1;
-  //   let day = theDate.getDate();
-  //   setDate(`${year}-${month}-${day}`);
-  // }, []);
 
   const handleRate = (e) => {
     e.preventDefault();
@@ -48,6 +40,9 @@ export const RateModal = () => {
     axios(config)
       .then(function (response) {
         console.log(response.data);
+
+        Swal.fire("Rated successfuly", "", "success");
+
         return handleClose();
       })
       .catch(function (error) {
@@ -97,7 +92,7 @@ export const RateModal = () => {
             <Button className="bg-secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button type="submit" className="bg-dark">
+            <Button type="submit" className="bg-dark ml-3">
               Save Changes
             </Button>
           </Form>

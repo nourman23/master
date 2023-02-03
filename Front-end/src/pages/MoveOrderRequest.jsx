@@ -29,9 +29,9 @@ export const MoveOrderRequest = () => {
         locationDetails.suburb
     );
   };
-  const handleDestination = () => {
-    setDestination("test");
-  };
+  // const handleDestination = () => {
+  //   setDestination("test");
+  // };
 
   var data = new FormData();
   data.append("user_id", auth()?.id);
@@ -87,11 +87,11 @@ export const MoveOrderRequest = () => {
                       className="form-control"
                       id="floatingInput"
                       placeholder="First Name *"
-                      value={auth()?.first_name + " " + auth()?.last_name}
+                      value={auth()?.first_name}
                       disabled
                     />
                     <label htmlFor="floatingInput" style={{ color: "grey" }}>
-                      Name
+                      First Name
                     </label>
                   </div>
                   <div className="form-floating mb-3">
@@ -116,7 +116,7 @@ export const MoveOrderRequest = () => {
                       style={{ height: "auto", width: "100%" }}
                       required
                       value={location}
-                      disabled
+                      // disabled
                     />
                     <label htmlFor="floatingInput" style={{ color: "grey" }}>
                       Your location
@@ -174,14 +174,16 @@ export const MoveOrderRequest = () => {
                       required
                       placeholder="Your destination"
                       value={destination}
-                      disabled
+                      onChange={(e) => {
+                        setDestination(e.target.value);
+                      }}
+                      // disabled
                     />
                     <label htmlFor="floatingInput" style={{ color: "grey" }}>
                       Your destination
                     </label>
                   </div>
-                  <div className="ml-3 mt-2">
-                    {/* <span style={{ color: "grey" }}>or</span> */}
+                  {/* <div className="ml-3 mt-2">
                     <p
                       onClick={handleDestination}
                       className="p-2 w-75 text-primary tw-cursor-pointer"
@@ -189,7 +191,7 @@ export const MoveOrderRequest = () => {
                     >
                       select my destination
                     </p>
-                  </div>
+                  </div> */}
                 </div>
                 <button
                   type="submit"

@@ -24,10 +24,7 @@ export const Testimonials = () => {
       <div className="testimonials section-bg">
         <div className="section-header pt-5">
           <h2>Testimonials</h2>
-          <p>
-            Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum
-            nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti
-          </p>
+          <p className="mt-4">What clients say about us ?</p>
         </div>
 
         <Carousel
@@ -49,8 +46,8 @@ export const Testimonials = () => {
                 <div className="testimonial-wrap">
                   <div className="testimonial-item my-5">
                     <img
-                      // src={`data:image/jpeg;base64,${user.image}`}
-                      src={user.image}
+                      src={`data:image/jpeg;base64,${user.image}`}
+                      // src={user.image}
                       className="testimonial-img"
                       alt=""
                     />

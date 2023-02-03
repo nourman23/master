@@ -23,6 +23,9 @@
 .text-primary {
   color: var(--primary) !important;
 }
+.text-default {
+  color: var(--default) !important;
+}
 .text-secondary {
   color: var(--secondary) !important;
 }

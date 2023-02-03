@@ -25,11 +25,11 @@ export const TopAbout = () => {
           </div>
           <div className="animate__fadeInDownBig col-lg-6 content order-last  order-lg-first">
             <h3 className="gradient-text">About Us</h3>
-            <p style={{ lineHeight: "38px" }}>
-              MOVERS provide seamless and easy furniture moving service which
-              takes the stress out of moving and strives to meet the needs and
-              requirements of all of our customers and go above and beyond to
-              exceed expectations
+            <p style={{ lineHeight: "38px" }} className="mt-5">
+              Moving luggage with MOVER has become easier than before, whether
+              it is the size of your possessions or even the distance of
+              transportation, so do not worry about us.We are one of the best
+              moving companies.
             </p>
             <ul>
               <li
@@ -39,11 +39,14 @@ export const TopAbout = () => {
               >
                 <i className="fa fa-duotone fa-box" />
                 <div>
-                  <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                  <p style={{ lineHeight: "38px" }}>
+                  <h5>
+                    Your furniture is safe and you have a guarantee against any
+                    damage to your furniture
+                  </h5>
+                  {/* <p style={{ lineHeight: "38px" }}>
                     Magni facilis facilis repellendus cum excepturi quaerat
                     praesentium libre trade
-                  </p>
+                  </p> */}
                 </div>
               </li>
               <li
@@ -53,11 +56,14 @@ export const TopAbout = () => {
               >
                 <i className="fa fa-light fa-truck-ramp-box" />
                 <div>
-                  <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                  <p style={{ lineHeight: "38px" }}>
+                  <h5>
+                    With MOVER, you will move your luggage to all cities, no
+                    matter the distance
+                  </h5>
+                  {/* <p style={{ lineHeight: "38px" }}>
                     Quo totam dolorum at pariatur aut distinctio dolorum
                     laudantium illo direna pasata redi
-                  </p>
+                  </p> */}
                 </div>
               </li>
               <li
@@ -67,11 +73,16 @@ export const TopAbout = () => {
               >
                 <i className="fa fa-light fa-house-user" />
                 <div>
-                  <h5>Voluptatem et qui exercitationem</h5>
-                  <p>
+                  <h5>
+                    {" "}
+                    We will transport the furniture for you by the most
+                    comfortable and safe means without hidden expenses and with
+                    the best quality
+                  </h5>
+                  {/* <p>
                     Et velit et eos maiores est tempora et quos dolorem autem
                     tempora incidunt maxime veniam
-                  </p>
+                  </p> */}
                 </div>
               </li>
             </ul>
